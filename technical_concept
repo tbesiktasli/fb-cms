@@ -1,0 +1,54 @@
+Client
+    name
+
+App
+    api_key
+    secret
+    title
+    description
+    image
+    image_small
+    image_tab
+    share_title
+    share_description
+    share_image
+    repeatable (boolean)
+    
+User
+    role
+    active
+
+Page
+    title (string)
+    slug (string)
+    position (integer)
+    protected (boolean)
+    published (timestamp)
+    fangate (boolean)
+    content
+
+Form
+    fbid
+    first_name
+    last_name
+    street
+    hour_nr
+    city
+    country
+    locale
+    gender
+    field1
+    field2
+    ...
+
+Interface is simply a context menu, that gives the following possibilities:
+- add a new page
+- switch to a page
+- edit page settings
+- add new element (list of html tags)
+- remove an element
+
+- HTML changes to the app are directly saved to html!
+- No DB needed to hold information about elements
+- This is done by DOM manipulation (PHP DOM class) and rendered directly into source code.
+- All user added elements get special IDs, so that they are highlighted and can be selected for editing.
