@@ -20,9 +20,9 @@ User
 
 Page
     title (string)
-    slug (string)
-    position (integer)
-    protected (boolean)
+    slug (string) -> for deep linking
+    order (integer) -> order of screen in app flow
+    auth (boolean) -> whether page can be opened without permission
     published (timestamp)
     fangate (boolean)
     content
@@ -52,3 +52,12 @@ Interface is simply a context menu, that gives the following possibilities:
 - No DB needed to hold information about elements
 - This is done by DOM manipulation (PHP DOM class) and rendered directly into source code.
 - All user added elements get special IDs, so that they are highlighted and can be selected for editing.
+
+
+
+Form data handling:
+- all form data is bound to one data set automatically
+
+Client apps handing:
+- URL + /apps/CLIENT/CLIENT_APP/
+- all template files are copied automatically
